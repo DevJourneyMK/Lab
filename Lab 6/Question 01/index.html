@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Checker</title>
+</head>
+<body>
+    <h1>Check Number Assignment</h1>
+  <button onclick="checkNumber()">Check Number</button>
+
+  <script>
+    function checkNumber() {
+      let num = prompt("Enter a number:");
+      if (num === null || num.trim() === "") return; 
+      num = Number(num);
+
+      if (isNaN(num)) {
+        alert("Invalid input!");
+      } else if (num > 0) {
+        alert("Positive number.");
+      } else if (num < 0) {
+        alert("Negative number.");
+      } else {
+        alert("Zero.");
+      }
+    }
+  </script>
+
+</body>
+</html>
